@@ -1,0 +1,33 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest --reporters=jest-junit",
+    "build": "echo \"Dummy build script for Autocode\"",
+    "compile": "sass src/styles/style.scss src/dist/style.css --no-source-map",
+    "prod": "npm run compile && postcss src/dist/style.css --replace --config postcss/prefix-purge --no-map && postcss src/dist/style.css --output src/dist/style.min.css --config postcss/minify --no-map",
+    "lint": "stylelint \"src/styles/**/*.scss\" --fix",
+    "format": "prettier --write \"src/styles/**/*.scss\" \"src/**/*.html\" \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^6.1.2",
+    "html-validate": "^8.7.4",
+    "jest": "29.7",
+    "jest-junit": "^13.2.0",
+    "jsdom": "^19.0.0",
+    "parse-gitignore": "^2.0.0",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard-scss": "^13.1.0"
+  },
+  "overrides": {
+    "chokidar": "^3.6.0"
+  }
+}

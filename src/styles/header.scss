@@ -1,0 +1,32 @@
+.header {
+  background-color: $color-light;
+  padding: 20px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 50px;
+    height: 50px;
+    animation: logo-animation 10s infinite linear;
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.1) rotate(180deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}

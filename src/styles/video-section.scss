@@ -1,0 +1,22 @@
+.video-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #eee;
+
+  &__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  &__play-btn {
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    background: $accent-color;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50%;
+
+    @include hover-effect;
+  }
+}

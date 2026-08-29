@@ -1,0 +1,15 @@
+.footer {
+  background-color: $color-dark;
+  color: white;
+  text-align: center;
+  padding: 30px;
+
+  &__email {
+    color: $accent-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

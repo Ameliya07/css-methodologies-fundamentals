@@ -1,0 +1,133 @@
+@media (width <= 600px) {
+  .header {
+    min-height: 64px;
+
+    &__container {
+      width: calc(100% - 40px);
+      min-height: 64px;
+    }
+
+    &__logo {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  .menu {
+    &__toggle {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff;
+      color: #fff;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    &__icon,
+    &__icon::before,
+    &__icon::after {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: currentcolor;
+      transition: transform $transition;
+    }
+
+    &__icon {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        content: "";
+      }
+
+      &::before {
+        top: -7px;
+      }
+
+      &::after {
+        top: 7px;
+      }
+    }
+
+    &__list {
+      position: absolute;
+      top: 64px;
+      right: 0;
+      left: 0;
+      z-index: 5;
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 20px;
+      background-color: #000;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__link {
+      padding: 14px;
+      border: 1px solid transparent;
+
+      &:hover {
+        border-color: $color-accent;
+      }
+    }
+
+    &--open {
+      .menu__list {
+        display: flex;
+      }
+
+      .menu__icon {
+        background-color: transparent;
+
+        &::before {
+          transform: translateY(7px) rotate(45deg);
+        }
+
+        &::after {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .text-section {
+    padding: 60px 0;
+
+    &__container {
+      width: calc(100% - 40px);
+    }
+
+    &__title {
+      font-size: 42px;
+    }
+  }
+
+  .video-section {
+    min-height: 400px;
+
+    &__container {
+      width: calc(100% - 40px);
+      min-height: 400px;
+    }
+  }
+
+  .footer {
+    padding: 40px 0;
+
+    &__container {
+      width: calc(100% - 40px);
+    }
+  }
+}

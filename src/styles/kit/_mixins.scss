@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+@mixin container {
+  width: min(100% - 40px, $container-width);
+  margin: 0 auto;
+}
+
+@mixin button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: 2px solid $color-accent;
+  border-radius: 4px;
+  background-color: $color-accent;
+  color: #000;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform $transition,
+    background-color $transition,
+    color $transition;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-accent;
+  }
+}
